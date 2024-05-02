@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Keyup</title>
+</head>
+<body>
+
+<input type="text" id="inputField" placeholder="Ketik sesuatu di sini...">
+
+<div id="output"></div>
+
+<script>
+    var inputField = document.getElementById("inputField");
+    
+    inputField.addEventListener("keyup", function(event) {
+        var inputValue = event.target.value;
+        document.getElementById("output").innerText = inputValue;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.6">
+    <title>Document</title>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.10/cdn.min.js"></script>
+</head>
+
+<body>
+    <div x-data="{nama: 'Atha'}">
+        <div x-data="{umur: 19 }">
+            <span x-text="nama"></span>
+            <span x-text="umur"></span>
+        </div>
+    </div>
+
+    <div x-data="{nama: 'Atha', angka: 5 }">
+        <h1>
+            Hallo, Nama saya : ATHALLARIK
+        </h1>
+        <h1>
+            website dasar : 100
+        </h1>
+        <h1>
+            <span x-text="angka % 2 === 0 ? 'genap' : 'ganjil'"></span>
+            Tidak Mengulang
+        </h1>
+    </div>
+</body>
+
+</html>

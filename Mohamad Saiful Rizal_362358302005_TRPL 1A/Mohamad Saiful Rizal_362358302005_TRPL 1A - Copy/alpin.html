@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Ujian Alpine</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body>
+    <div x-data="{ nilaiUjian: null }">
+        <h1>hasil ujianmu ni boy, moga bagus</h1>
+        <button @click="nilaiUjian = 85">Tampilkan Hasil</button>
+        <template x-if="nilaiUjian !== null">
+            <p>Nilai ujian Anda: <span x-text="nilaiUjian"></span></p>
+        </template>
+    </div>
+</body>
+</html>

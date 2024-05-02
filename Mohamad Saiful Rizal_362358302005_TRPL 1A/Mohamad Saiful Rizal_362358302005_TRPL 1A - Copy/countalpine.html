@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hitung Jumlah Huruf</title>
+</head>
+<body>
+
+<h2>Hitung Jumlah Huruf dalam Kalimat</h2>
+
+<p>Masukkan kalimat di bawah:</p>
+
+<input type="text" id="inputKalimat" placeholder="Masukkan kalimat...">
+<button onclick="hitungJumlahHuruf()">Hitung</button>
+
+<p id="hasilHitung"></p>
+
+<script>
+function hitungJumlahHuruf() {
+  var kalimat = document.getElementById("inputKalimat").value;
+  var hurufCount = {};
+  
+  var kalimatTanpaSpasi = kalimat.replace(/\s/g, "").toLowerCase();
+  
+  for (var i = 0; i < kalimatTanpaSpasi.length; i++) {
+    var huruf = kalimatTanpaSpasi[i];
+    if (hurufCount[huruf] === undefined) {
+      hurufCount[huruf] = 1;
+    } else {
+      hurufCount[huruf]++;
+    }
+  }
+  
+  var hasilString = "Jumlah huruf dalam kalimat:<br>";
+  for (var huruf in hurufCount) {
+    hasilString += huruf + ": " + hurufCount[huruf] + "<br>";
+  }
+  
+  document.getElementById("hasilHitung").innerHTML = hasilString;
+}
+</script>
+
+</body>
+</html>

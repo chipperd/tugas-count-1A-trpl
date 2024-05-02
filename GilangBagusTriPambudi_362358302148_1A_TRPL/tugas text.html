@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas mengetik Alphine</title>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.10/cdn.js"></script>
+</head>
+<body>
+    <div x-data="{nama : 'Gilang Bagus Tri Pambudi'}">
+        <div x-data="{umur : 20}">
+            <span x-text="nama"></span>
+            <span x-text="umur"></span>
+        </div>
+    </div>
+
+    <div x-data="{nama : 'Gilang Bagus Tri Pambudi', angka : 5}">
+        <h1>
+            Hallo, Nama saya : Gilang
+        </h1>
+        <h1>
+            Pemograman web dasar : 80
+        </h1>
+        <h1>
+            <span x-text="angka % 2===0 ?  'genap' : 'ganjil'"></span>
+            Tidak mengulang
+        </h1>
+    </div>
+  
+</body>
+</html>
